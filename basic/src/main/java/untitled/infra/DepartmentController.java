@@ -23,7 +23,7 @@ public class DepartmentController {
 
 
     @PutMapping("/departments/search/")
-    public Object (@RequestBody  query){
-        return departmentRepository.();
+    public Object (@RequestBody DepartmentViewQuery query){
+        return departmentRepository.(query.getName());
     }
 }
